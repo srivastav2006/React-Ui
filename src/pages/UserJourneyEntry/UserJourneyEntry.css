@@ -1,0 +1,12 @@
+/* styles.css */
+@keyframes fadeAnimation {
+    0% { opacity: 1; color: orange; }
+    50% { opacity: 0.5; color: green; }
+    100% { opacity: 1; color: orange; }
+  }
+  
+  .autosave-text {
+    animation: fadeAnimation 2s infinite;
+  }
+  
+  

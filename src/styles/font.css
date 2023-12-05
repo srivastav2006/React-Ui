@@ -1,0 +1,13 @@
+
+ @font-face { font-display: swap; font-style : normal; src: url("assets/fonts/MulishRomanExtraBold.ttf"); font-family : "Mulish"; font-weight : 800;  }
+ @font-face { font-display: swap; font-style : normal; src: url("assets/fonts/MulishRegular.ttf"); font-family : "Mulish"; font-weight : 400;  }
+ @font-face { font-display: swap; font-style : normal; src: url("assets/fonts/MulishRomanBold.ttf"); font-family : "Mulish"; font-weight : 700;  }
+ @font-face { font-display: swap; font-style : normal; src: url("assets/fonts/VigaRegular.ttf"); font-family : "Viga"; font-weight : 400;  }
+ @font-face { font-display: swap; font-style : normal; src: url("assets/fonts/MulishSemiBold.ttf"); font-family : "Mulish"; font-weight : 600;  }
+ @font-face { font-display: swap; font-style : normal; src: url("assets/fonts/PoppinsSemiBold.ttf"); font-family : "Poppins"; font-weight : 600;  }
+ @font-face { font-display: swap; font-style : normal; src: url("assets/fonts/PoppinsRegular.ttf"); font-family : "Poppins"; font-weight : 400;  }
+ @font-face { font-display: swap; font-style : normal; src: url("assets/fonts/PoppinsMedium.ttf"); font-family : "Poppins"; font-weight : 500;  }
+ @font-face { font-display: swap; font-style : normal; src: url("assets/fonts/NunitoRegular.ttf"); font-family : "Nunito"; font-weight : 400;  }
+ @font-face { font-display: swap; font-style : normal; src: url("assets/fonts/NunitoSemiBold.ttf"); font-family : "Nunito"; font-weight : 600;  }
+ @font-face { font-display: swap; font-style : normal; src: url("assets/fonts/PoppinsLight.ttf"); font-family : "Poppins"; font-weight : 300;  }
+ @font-face { font-display: swap; font-style : normal; src: url("assets/fonts/RobotoMonoBold.ttf"); font-family : "Roboto Mono"; font-weight : 700;  }
