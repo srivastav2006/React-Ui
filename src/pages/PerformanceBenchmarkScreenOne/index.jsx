@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ReactSpeedometer from "react-d3-speedometer";
+import "./PerformanceBenchmarkScreenOne.css"; // Import the CSS file
 
 import { Img, List, Text } from "components";
 
@@ -88,7 +89,7 @@ const PerformanceBenchmarkScreenOnePage = () => {
               </div>
 
               <div className="bg-white-A700 flex md:flex-1 flex-col gap-[41px] items-center justify-start ml-14 md:ml-[0] p-[26px] sm:px-5 rounded-[11px] shadow-bs5 w-[35%] md:w-full" style={{ height: '300px' }}>
-                <Text className="mb-0.5 text-[22px] mt-0 text-black-900 sm:text-lg md:text-xl" size="txtPoppinsMedium22">
+                <Text className="autosave-text mb-0.5 text-[22px] mt-0 text-black-900 sm:text-lg md:text-xl" size="txtPoppinsMedium22 ">
                   Market Conditions
                 </Text>
                 <ReactSpeedometer
