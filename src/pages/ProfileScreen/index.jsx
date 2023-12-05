@@ -20,38 +20,43 @@ const ProfileScreenPage = () => {
                 alt="rectangle346265"
               />
             </div>
-            <div className="flex md:flex-1 md:flex-col flex-row gap-[50px] items-start justify-start md:ml-[0] ml-[477px] md:mt-0 mt-[34px] w-auto md:w-full">
-              <Text
-                className="text-[17px] text-black-900_c1 w-auto"
-                size="txtPoppinsRegular17Black900c1"
-              >
-                Dashboard
-              </Text>
-              <Text
-                className="text-[17px] text-black-900_c1 w-auto"
-                size="txtPoppinsRegular17Black900c1"
-              >
-                Journals
-              </Text>
-              <Text
-                className="text-[17px] text-black-900_c1 w-auto"
-                size="txtPoppinsRegular17Black900c1"
-              >
-                Trading
-              </Text>
-              <Text
-                className="text-[17px] text-black-900_c1 w-auto"
-                size="txtPoppinsRegular17Black900c1"
-              >
-                Assesments
-              </Text>
-              <Text
-                className="text-[17px] text-black-900_c1 w-auto"
-                size="txtPoppinsRegular17Black900c1"
-              >
-                Learning
-              </Text>
-            </div>
+              <Img
+                className="h-[81px] md:h-auto rounded-[50%] w-[81px]"
+                src="images/img_ellipse11045.png"
+                alt="ellipse11045"
+              />
+              <div className="flex md:flex-1 md:flex-col flex-row gap-[20px] items-start justify-start md:ml-[0] ml-[477px] md:mt-0 mt-[34px] w-auto md:w-full">
+                <Text
+                  className="text-[17px] text-blue-600 font-bold w-auto"
+                  size="txtPoppinsRegular17Black900c1"
+                >
+                  Dashboard
+                </Text>
+                <Text
+                  className="text-[17px] text-black-900_c1 w-auto"
+                  size="txtPoppinsRegular17Black900c1"
+                >
+                  Journals
+                </Text>
+                <Text
+                  className="text-[17px] text-black-900_c1 w-auto"
+                  size="txtPoppinsRegular17Black900c1"
+                >
+                  Trading
+                </Text>
+                <Text
+                  className="text-[17px] text-black-900_c1 w-auto"
+                  size="txtPoppinsRegular17Black900c1"
+                >
+                  Assesments
+                </Text>
+                <Text
+                  className="text-[17px] text-black-900_c1 w-auto"
+                  size="txtPoppinsRegular17Black900c1"
+                >
+                  Learning
+                </Text>
+              </div>
             <Img
               className="h-[81px] md:h-auto md:ml-[0] ml-[52px] md:mt-0 mt-1.5 rounded-[50%] w-[81px]"
               src="images/img_ellipse11045.png"
@@ -59,10 +64,11 @@ const ProfileScreenPage = () => {
             />
           </div>
           <Img
-            className="h-[169px] md:ml-[0] ml-[637px] mt-[46px]"
+            className=" self-center mt-[35px]"
             src="images/img_group1171277859.svg"
             alt="group1171277859"
           />
+          
           <div className="flex flex-row font-mazzard sm:gap-10 items-center justify-between md:ml-[0] ml-[247px] mt-[87px] w-[43%] md:w-full">
             <Text
               className="text-black-900_ed text-center text-lg"

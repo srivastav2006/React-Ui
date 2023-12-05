@@ -121,7 +121,12 @@ const DashboardPage = () => {
                 alt="rectangle346265"
               />
             </div>
-            <div className="flex md:flex-1 md:flex-col flex-row gap-[50px] items-start justify-start md:ml-[0] ml-[477px] md:mt-0 mt-[34px] w-auto md:w-full">
+            <Img
+              className="self-center h-[81px] md:h-auto mr-1 md:ml-[0] ml-[50px] md:mt-0 -mt-12 rounded-[50%] w-[81px]"
+              src="images/img_ellipse11045.png"
+              alt="ellipse11045"
+            />
+            <div className="flex md:flex-1 md:flex-col flex-row gap-[20px] items-start justify-start md:ml-[0] ml-[477px] md:mt-0 mt-[34px] w-auto md:w-full">
               <Text
                 className="text-[17px] text-blue-600 w-auto self-center"
                 size="txtPoppinsSemiBold17"
@@ -176,7 +181,7 @@ const DashboardPage = () => {
             </Text>
             <div className="bg-blue-600_2d flex flex-row font-mazzard items-start justify-start sm:mt-0 mt-[19px] p-[19px] rounded-md">
               <Text
-                className="ml-[11px] my-0.5 text-black-900 text-center text-lg"
+                className="ml-[1px] my-0.5 text-blue-600 font-bold  underline  text-center text-lg"
                 size="txtMazzardHSemiBold18"
               >
                 Timeframe
