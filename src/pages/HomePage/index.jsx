@@ -22,12 +22,22 @@ const HomePagePage = () => {
         <div className="flex flex-col justify-end w-full">
           <div className="font-mulish md:h-[490px] sm:h-[670px] h-[796px] mr-[58px] md:px-5 relative w-[96%] md:w-full">
             <div className="absolute md:h-[490px] h-[670px] inset-x-[0] mx-auto top-[3%] w-[90%] md:w-full">
-              <div className="flex flex-col h-full items-center justify-start ml-auto mr-[214px] mt-[18px] w-[42%]">
-                <div className="flex sm:flex-col flex-row gap-[49px] items-start justify-start w-auto sm:w-full">
+            <div className="absolute md:h-[127px] h-[132px] left-[0] top-[0] w-[15%]">
+              <Img
+                className="absolute h-[127px] inset-[0] justify-center m-auto object-cover w-full"
+                src="images/img_marketmindslogo.png"
+                alt="marketmindslogo"
+              />
+              <Img
+                className="absolute bottom-[0] h-12 inset-x-[0] mx-auto object-cover w-full"
+                src="images/img_rectangle34626545.png"
+                alt="rectangle346265"
+              />
+            </div>  
+            <div className="flex items-center  whitespace-nowrap gap-10 sm:w-full ml-96  mt-2 w-3/5">
                   <span
-                    className="text-base text-blue-600 w-auto cursor-pointer"
-                    // size="txtMulishRomanExtraBold16"
-                    onClick={openGoogle}
+                    className=" font-bold text-blue-600  "
+                     size="txtMulishRomanExtraBold16"
                   >
                     Home
                   </span>
@@ -56,13 +66,7 @@ const HomePagePage = () => {
                   >
                     Login
                   </span>
-                </div>
-              </div>
-              <div className="absolute flex flex-col h-full inset-[0] items-center justify-center m-auto w-full">
-                <div className="flex flex-col md:gap-10 gap-[220px] justify-start w-full">
-                  <div className="flex flex-row sm:gap-10 gap-[531px] items-start justify-end md:ml-[0] ml-[508px] w-[59%] md:w-full">
-                    <div className="bg-blue-600 h-1 mb-[9px] mt-[45px] rounded-sm w-[5%]"></div>
-                    <Button
+                  <Button
                       className="cursor-pointer font-bold leading-[normal] min-w-[163px] text-base text-center"
                       shape="round"
                       size="lg"
@@ -70,7 +74,15 @@ const HomePagePage = () => {
                     >
                       Register
                     </Button>
-                  </div>
+                    <Img
+              className="absolute h-6 right-[0] top-[3%] w-6"
+              src="images/img_search.svg"
+              alt="search"
+            />
+              </div>
+              <div className="absolute flex flex-col h-full inset-[0] items-center justify-center m-auto w-full">
+                <div className="flex flex-col md:gap-10 gap-[220px] justify-start w-full">
+                  
                   <div className="flex flex-col gap-[45px] items-start justify-start mr-[477px] w-[62%] md:w-full">
                     <div className="flex flex-col gap-[17px] items-start justify-start w-full">
                       <Text
@@ -115,11 +127,7 @@ const HomePagePage = () => {
                 </div>
               </div>
             </div>
-            <Img
-              className="absolute h-6 right-[0] top-[5%] w-6"
-              src="images/img_search.svg"
-              alt="search"
-            />
+           
             <div className="absolute bottom-[0] md:h-[393px] h-[616px] right-[1%] w-[38%] sm:w-full">
               <Img
                 className="absolute h-[393px] left-[5%] object-cover top-[4%] w-4/5"
@@ -142,18 +150,7 @@ const HomePagePage = () => {
                 />
               </Button>
             </div>
-            <div className="absolute md:h-[127px] h-[132px] left-[0] top-[0] w-[15%]">
-              <Img
-                className="absolute h-[127px] inset-[0] justify-center m-auto object-cover w-full"
-                src="images/img_marketmindslogo.png"
-                alt="marketmindslogo"
-              />
-              <Img
-                className="absolute bottom-[0] h-12 inset-x-[0] mx-auto object-cover w-full"
-                src="images/img_rectangle34626545.png"
-                alt="rectangle346265"
-              />
-            </div>
+          
           </div>
           <Text
             className="capitalize mt-[140px] mx-auto sm:text-4xl md:text-[38px] text-[40px] text-black-900 text-center"
