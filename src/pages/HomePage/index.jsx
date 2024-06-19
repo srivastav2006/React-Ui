@@ -1,5 +1,5 @@
 import React from "react";
-
+import { BrowserRouter as Router,NavLink } from "react-router-dom";
 import {
   Accordion,
   AccordionItem,
@@ -10,18 +10,36 @@ import {
 } from "react-accessible-accordion";
 
 import { Button, Img, Text } from "components";
+import { Link } from "react-router-dom";
 
 const HomePagePage = () => {
-  const openGoogle = () => {
-    console.log("Sdsdsd");
-    window.open('https://www.google.com', '_blank');
+  const Scrolltohowitworks =()=>{
+    window.scrollTo({
+      top:860,
+      behavior:"smooth"
+    });
   };
+  const Scrolltofaq =()=>{
+    window.scrollTo({
+      top:3160,
+      behavior:"smooth"
+    });
+  };
+  const Scrolltoc =()=>{
+    window.scrollTo({
+      top:4180,
+      behavior:"smooth"
+    });
+  };
+
   return (
+    
     <>
       <div className="bg-white-A700 flex flex-col items-center justify-end mx-auto pt-[19px] w-full">
         <div className="flex flex-col justify-end w-full">
           <div className="font-mulish md:h-[490px] sm:h-[670px] h-[796px] mr-[58px] md:px-5 relative w-[96%] md:w-full">
             <div className="absolute md:h-[490px] h-[670px] inset-x-[0] mx-auto top-[3%] w-[90%] md:w-full">
+            <nav className="fixed top-0 left-0 w-full z-10 p-4 bg-white-A700">
             <div className="absolute md:h-[127px] h-[132px] left-[0] top-[0] w-[15%]">
               <Img
                 className="absolute h-[127px] inset-[0] justify-center m-auto object-cover w-full"
@@ -35,51 +53,60 @@ const HomePagePage = () => {
               />
             </div>  
             <div className="flex items-center  whitespace-nowrap gap-10 sm:w-full ml-96  mt-2 w-3/5">
-                  <span
+            <Link exact to="/" >
+            <span
                     className=" font-bold text-blue-600  "
                      size="txtMulishRomanExtraBold16"
                   >
                     Home
                   </span>
+                  </Link>
+                  
                   <span
                     className="text-base text-gray-600 w-auto cursor-pointer"
                     size="txtMulishRegular16"
-                    onClick={openGoogle}
+                    onClick={Scrolltohowitworks}
+                   
                   >
                     How It Works
                   </span>
-                  <span
+                  <span onClick={Scrolltofaq}
                     className="text-base text-gray-600 w-auto cursor-pointer"
-                    onClick={openGoogle}
+                    
                   >
                     FAQs
                   </span>
-                  <span
+                  <span onClick={Scrolltoc}
                     className="text-base text-gray-600 w-auto cursor-pointer"
-                    onClick={openGoogle}
+                    
                   >
                     Contact Us
                   </span>
-                  <span
+                  <Link to="/loginpage" activeClassName="active" >
+                  <div
                     className="text-base text-gray-600 w-auto cursor-pointer"
-                    onClick={openGoogle}
+                    
                   >
                     Login
-                  </span>
+                  </div>
+                  </Link>
+                  <Link to="/registerpage" activeClassName="active" >
                   <Button
                       className="cursor-pointer font-bold leading-[normal] min-w-[163px] text-base text-center"
                       shape="round"
                       size="lg"
-                      onClick={openGoogle}
+                      
                     >
                       Register
                     </Button>
+                    </Link>
                     <Img
               className="absolute h-6 right-[0] top-[3%] w-6"
               src="images/img_search.svg"
               alt="search"
             />
               </div>
+              </nav>
               <div className="absolute flex flex-col h-full inset-[0] items-center justify-center m-auto w-full">
                 <div className="flex flex-col md:gap-10 gap-[220px] justify-start w-full">
                   
@@ -106,19 +133,21 @@ const HomePagePage = () => {
                       </Text>
                     </div>
                     <div className="flex flex-row gap-[31px] items-center justify-start w-[49%] md:w-full">
-                      <Button
+                      <Link to="/loginpage"><Button
                         className="cursor-pointer font-semibold leading-[normal] min-w-[170px] text-base text-center"
                         shape="round"
                         size="lg"
                       >
                         Get Started
                       </Button>
+                      </Link>
                       <Button
                         className="cursor-pointer font-semibold leading-[normal] min-w-[163px] text-base text-center"
                         shape="round"
                         color="black_900"
                         size="lg"
                         variant="outline"
+                        onClick={Scrolltohowitworks}
                       >
                         How It Works
                       </Button>
@@ -671,6 +700,7 @@ const HomePagePage = () => {
         </div>
       </div>
     </>
+    
   );
 };
 

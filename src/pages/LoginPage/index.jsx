@@ -1,8 +1,27 @@
-import React from "react";
+import {useState} from "react";
+import { RiEyeFill, RiEyeOffFill } from 'react-icons/ri';
 
 import { Button, Img, Input, Line, Text } from "components";
+import React from 'react';
+import { Link } from "react-router-dom";
 
 const LoginPagePage = () => {
+  const [showPassword, setShowPassword] = useState(false);
+  const [password, setPassword] = useState(null);
+  const [email, setEmail] = useState(null);
+  const [rememberMe, setRememberMe] = useState(false);
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
+  const handleChange = (e) => {
+    if (e && e.target && e.target.value) {
+      setPassword(e.target.value);
+    } else {
+      console.error('Unexpected event structure:', e);
+    }
+  };
+
   return (
     <>
       <div className="bg-white-A700 flex flex-col font-mazzard items-center justify-start mx-auto w-full">
@@ -39,13 +58,20 @@ const LoginPagePage = () => {
                 className="!placeholder:text-black-900_38 !text-black-900_38 leading-[normal] p-0 text-[15px] text-center w-full"
                 wrapClassName="flex mt-[33px] w-full"
                 type="email"
+                value={email}
+                onChange={(e)=>{if (e && e.target && e.target.value) {
+                  setEmail(e.target.value);
+                } }}
+                
                 prefix={
                   <Img
                     className="h-[17px] mr-[18px] my-px"
                     src="images/img_icoutlineemail.svg"
                     alt="ic:outline-email"
                   />
+                  
                 }
+                
                 size="sm"
               ></Input>
               <Input
@@ -53,7 +79,9 @@ const LoginPagePage = () => {
                 placeholder="Password"
                 className="!placeholder:text-black-900_38 !text-black-900_38 leading-[normal] p-0 text-[15px] text-center w-full"
                 wrapClassName="flex mt-5 w-full"
-                type="password"
+                type={showPassword ? 'text' : 'password'}
+                value={password}
+                onChange={handleChange}
                 prefix={
                   <div className="h-[31px] mr-[11px] pt-1.5 pb-[7px] pl-1.5 pr-[7px] w-[31px] outline-blue-600 outline-[0.5px] outline rounded-[15px]">
                     <Img
@@ -61,16 +89,35 @@ const LoginPagePage = () => {
                       src="images/img_akariconslockon.svg"
                       alt="akar-icons:lock-on"
                     />
+
                   </div>
                 }
+                suffix={
+                  showPassword ? (
+                    <RiEyeOffFill
+                      className="h-[17px] mr-[18px] my-px cursor-pointer"
+                      onClick={togglePasswordVisibility}
+                    />
+                  ) : (
+                    <RiEyeFill
+                      className="h-[17px] mr-[18px] my-px cursor-pointer"
+                      onClick={togglePasswordVisibility}
+                    />
+                  )
+                }
               ></Input>
-              <a
-                
+              <div className="p-2">
+              <input id="rm" type="checkbox"></input>
+              <label className="p-2" htmlFor="rm">Remember me</label>
+              </div>
+              <Link
+                to="/forgotpassword"
                 className="md:ml-[0] ml-[191px] mt-[26px] text-[17px] text-black-900_a8 text-center"
               >
                 <Text size="txtMazzardHMedium17">Forgot password?</Text>
-              </a>
-              <Button
+              </Link>
+              
+            <Button
                 className="cursor-pointer font-semibold leading-[normal] min-w-[337px] mt-[26px] text-center text-lg"
                 shape="round"
                 size="lg"
@@ -84,12 +131,14 @@ const LoginPagePage = () => {
                 >
                   Are you a new member?
                 </Text>
+                <Link to="/registerpage">
                 <Text
                   className="text-blue-600 text-center text-lg"
                   size="txtMazzardHMedium18"
                 >
                   Register{" "}
                 </Text>
+                </Link>
               </div>
               <div className="flex flex-row items-start justify-between ml-2.5 md:ml-[0] mt-9 w-[94%] md:w-full">
                 <Line className="bg-black-900_38 h-px mb-2.5 mt-[7px] w-[32%]" />
